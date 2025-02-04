@@ -1,0 +1,17 @@
+src/
+├── assets/
+├── components/
+│   ├── layout/
+│   │   ├── Sidebar.vue
+│   │   └── MainContent.vue
+│   └── ui/  # shadcn-vue 组件
+├── stores/
+│   ├── modelStore.js
+│   └── settingStore.js
+├── views/
+│   ├── ModelSearch.vue
+│   ├── LocalModels.vue
+│   └── Settings.vue
+├── router/
+│   └── index.js
+└── App.vue 
