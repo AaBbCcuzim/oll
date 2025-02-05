@@ -55,7 +55,6 @@ _模型详情 - 查看模型参数和系统提示词_
 - [Node.js](https://nodejs.org/) >= 16
 - [Rust](https://www.rust-lang.org/) >= 1.70
 - [Ollama](https://ollama.ai/) >= 0.1.24
-- [pnpm](https://pnpm.io/) (推荐)
 
 ### 安装步骤
 
@@ -79,19 +78,19 @@ cd oll
 3. 安装依赖
 
 ```bash
-pnpm install
+npm install
 ```
 
 4. 启动开发服务器
 
 ```bash
-pnpm tauri dev
+npm tauri dev
 ```
 
 5. 构建应用
 
 ```bash
-pnpm tauri build
+npm tauri build
 ```
 
 ## 🛠️ 技术栈
@@ -167,13 +166,13 @@ src/
 
 ```bash
 # 启动开发服务器
-pnpm tauri dev
+npm tauri dev
 
 # 构建应用
-pnpm tauri build
+npm tauri build
 
 # 更新模型库数据
-pnpm fetch-models
+npm fetch-models
 ```
 
 ## ❓ 常见问题
@@ -196,24 +195,6 @@ pnpm fetch-models
 - 查看应用日志
 - 清理缓存后重试
 
-## 🗺️ 开发路线图
-
-- [ ] 深色模式支持
-- [ ] 多语言本地化
-- [ ] 模型微调功能
-- [ ] 对话模板系统
-- [ ] 插件系统
-
-## 🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-1. Fork 项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 提交 Pull Request
-
 ## 📄 许可证
 
 [MIT License](LICENSE)
@@ -223,15 +204,3 @@ pnpm fetch-models
 - [Ollama](https://ollama.ai/) - 本地大语言模型运行时
 - [Tauri](https://tauri.app/) - 跨平台应用框架
 - [shadcn-vue](https://www.shadcn-vue.com/) - UI 组件库
-
-## 📝 更新日志
-
-### [0.1.0] - 2024-03-21
-
-- 初始版本发布
-- 基础模型管理功能
-- 聊天和收藏功能
-- 设置系统
-- 支持 Markdown 和代码高亮
-- 多会话管理
-- 标签系统
