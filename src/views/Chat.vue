@@ -12,6 +12,16 @@
         <MessageSquare class="h-16 w-16 mb-6" />
         <h3 class="text-xl font-semibold mb-2">开始新的对话</h3>
         <p class="mb-6 max-w-md">选择一个模型并点击左侧的"+"按钮创建新对话，或者从历史会话中选择一个继续聊天。</p>
+        <Select v-model="selectedModel" @update:modelValue="onModelSelect" class="w-64">
+          <SelectTrigger>
+            <SelectValue placeholder="选择模型" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem v-for="model in availableModels" :key="model.name" :value="model.name">
+              {{ model.name }}
+            </SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <!-- 聊天界面 -->

@@ -1,12 +1,21 @@
-```
-
-```
-
 # Oll - Ollama 模型管理工具
 
 Oll 是一个基于 Tauri + Vue 3 开发的 Ollama 模型管理工具，提供了友好的图形界面来管理和使用本地大语言模型。它可以帮助你轻松地下载、管理和使用各种开源大语言模型。
 
-![应用截图](screenshots/main.png)
+![聊天界面](image/README/1738728221658.png)
+_聊天界面 - 支持多会话和 Markdown 渲染_
+
+![模型管理](image/README/1738728240217.png)
+_模型管理 - 支持搜索和下载模型_
+
+![收藏夹](image/README/1738730014833.png)
+_收藏夹 - 强大的标签管理和筛选功能_
+
+![设置界面](image/README/1738730080439.png)
+_设置界面 - 自定义 Ollama 服务器和下载选项_
+
+![模型详情](image/README/1738730097576.png)
+_模型详情 - 查看模型参数和系统提示词_
 
 ## ✨ 主要特性
 
@@ -45,34 +54,45 @@ Oll 是一个基于 Tauri + Vue 3 开发的 Ollama 模型管理工具，提供�
 
 - [Node.js](https://nodejs.org/) >= 16
 - [Rust](https://www.rust-lang.org/) >= 1.70
-- [Ollama](https://ollama.ai/) 已安装并运行
+- [Ollama](https://ollama.ai/) >= 0.1.24
+- [pnpm](https://pnpm.io/) (推荐)
 
 ### 安装步骤
 
-1. 克隆仓库
+1. 安装 Ollama
 
-   ```
-   git clone https://github.com/yourusername/oll.git
-   cd oll
-   ```
+```bash
+# macOS / Linux
+curl -fsSL https://ollama.com/install.sh | sh
 
-2. 安装依赖
+# Windows
+# 从 https://ollama.com/download/windows 下载安装包
+```
 
-   ```bash
-   npm install
-   ```
+2. 克隆仓库
 
-3. 启动开发服务器
+```bash
+git clone https://github.com/yourusername/oll.git
+cd oll
+```
 
-   ```bash
-   npm tauri dev
-   ```
+3. 安装依赖
 
-4. 构建应用
+```bash
+pnpm install
+```
 
-   ```bash
-   npm tauri build
-   ```
+4. 启动开发服务器
+
+```bash
+pnpm tauri dev
+```
+
+5. 构建应用
+
+```bash
+pnpm tauri build
+```
 
 ## 🛠️ 技术栈
 
@@ -145,13 +165,16 @@ src/
 
 ### 开发命令
 
-bash
-启动开发服务器
+```bash
+# 启动开发服务器
 pnpm tauri dev
-构建应用
+
+# 构建应用
 pnpm tauri build
-更新模型库数据
+
+# 更新模型库数据
 pnpm fetch-models
+```
 
 ## ❓ 常见问题
 
@@ -173,6 +196,24 @@ pnpm fetch-models
 - 查看应用日志
 - 清理缓存后重试
 
+## 🗺️ 开发路线图
+
+- [ ] 深色模式支持
+- [ ] 多语言本地化
+- [ ] 模型微调功能
+- [ ] 对话模板系统
+- [ ] 插件系统
+
+## 🤝 贡献指南
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 提交 Pull Request
+
 ## 📄 许可证
 
 [MIT License](LICENSE)
@@ -182,3 +223,15 @@ pnpm fetch-models
 - [Ollama](https://ollama.ai/) - 本地大语言模型运行时
 - [Tauri](https://tauri.app/) - 跨平台应用框架
 - [shadcn-vue](https://www.shadcn-vue.com/) - UI 组件库
+
+## 📝 更新日志
+
+### [0.1.0] - 2024-03-21
+
+- 初始版本发布
+- 基础模型管理功能
+- 聊天和收藏功能
+- 设置系统
+- 支持 Markdown 和代码高亮
+- 多会话管理
+- 标签系统
